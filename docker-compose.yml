@@ -1,0 +1,25 @@
+version: '3'
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: dockerfiles/Dockerfile-backend
+    ports:
+      - 8081:8081
+    depends_on:
+      - database
+  database:
+    build:
+      context: .
+      dockerfile: dockerfiles/Dockerfile-db
+    ports:
+      - 3306
+  # test:
+  #   build:
+  #     context: .
+  #     dockerfile: dockerfiles/Dockerfile-test
+  #   depends_on:
+  #     - backend
+  #     - database
+  #   command: python spam.py
+  #   entrypoint: sh -c 'echo "Testing is not supported in this mode" && exit 1'

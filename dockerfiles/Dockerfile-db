@@ -1,0 +1,10 @@
+FROM mariadb
+
+ENV MYSQL_DATABASE fable
+ENV MYSQL_USER kush
+ENV MYSQL_PASSWORD weak_password
+ENV MYSQL_ROOT_PASSWORD weak_root_password
+
+COPY dockerfiles/init.sql /docker-entrypoint-initdb.d/
+
+EXPOSE 3306
