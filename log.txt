@@ -1,1 +1,0 @@
-[{"unix_ts": 12323, "user_id": 1234, "event_name": "login"}, {"unix_ts": 12323, "user_id": 1234, "event_name": "login"}, {"unix_ts": 12323, "user_id": 1234, "event_name": "login"}, {"unix_ts": 12323, "user_id": 1234, "event_name": "login"}]
