@@ -35,9 +35,9 @@ class FableLog:
         data = req.media
         size_bytes = os.path.getsize("log.txt")
 
-        size_mb = size_bytes / (1024)
+        size_in_kb = size_bytes / (1024)
 
-        if (size_mb < 5):
+        if (size_in_kb < 100):
             if os.stat("log.txt").st_size > 0:
                 with open('log.txt', 'r') as file:
                     log_data = json.load(file)
